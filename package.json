@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-native-webrtc/react-native-incall-manager.git"
+    "url": "https://github.com/AnnetteCommunications/react-native-incall-manager.git"
   },
   "keywords": [
     "React",
@@ -24,7 +24,7 @@
   "author": "Henry Lin <zxcpoiu@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/react-native-webrtc/react-native-incall-manager/issues"
+    "url": "https://github.com/AnnetteCommunications/react-native-incall-manager/issues"
   },
   "homepage": "https://github.com/react-native-webrtc/react-native-incall-manager#readme",
   "peerDependencies": {
