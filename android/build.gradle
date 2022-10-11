@@ -8,6 +8,23 @@ android {
     compileSdkVersion safeExtGet('compileSdkVersion', 30)
     buildToolsVersion safeExtGet('buildToolsVersion', "30.0.2")
 
+    // CM Oct 2022
+    // When buidling with our build scripts, this incall manager code fails with a message that javac 
+    // -source 7 cannot be used with this codebase. Well, I have no idea WHY this is being compiled with
+    // source compatibility for Java 7. I don't know gradle well enough to figure it out, even though the
+    // whole communicator project, at this time, is set to compile with Java 8. Well, for some reason,
+    // this thing keeps failing with source 7. To fix this, I forked this code base and added the 
+    // following config directives to this build file.
+    //
+    // Maybe some day somebody will figure out why this is happening. For now, this gets it a compiled
+    // module!
+    //
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 21)
         targetSdkVersion safeExtGet('targetSdkVersion', 30)
